@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Adicionar Tarefa</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <ion-item>
+      <ion-label position="stacked" aria-label="id">Id</ion-label>
+      <ion-input [(ngModel)]="id" placeholder="Id da tarefa"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" aria-label="titulo">Título</ion-label>
+      <ion-input [(ngModel)]="titulo" placeholder="Título da tarefa"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" aria-label="descricao">Descrição</ion-label>
+      <ion-input [(ngModel)]="descricao" placeholder="Descrição da tarefa"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button (click)="salvarTarefa()">Salvar</ion-button>
+    </ion-item>
+</ion-content>
