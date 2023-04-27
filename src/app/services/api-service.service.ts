@@ -17,14 +17,22 @@ export class ApiServiceService {
     return data
   }
 
+  getTaskById(id:number){
+    let data = this.http.get(`${this.apiUrl}/tarefa/${id}`);
+    return data
+  }
+
   createTask(item: any) {
     return this.http.post(`${this.apiUrl}/tarefa`, item).subscribe((res) => {
     });
   }
 
+  updateTask(id:any, item: any) {
+    return this.http.put(`${this.apiUrl}/tarefa/${id}`, item).subscribe((res) => {
+    });
+  }
+
   deleteTask(id:any){
-    return this.http.delete(`${this.apiUrl}/tarefa/${id}`).subscribe((res) => {
-      console.log(res)
-    })
+    return this.http.delete(`${this.apiUrl}/tarefa/${id}`)
   }
 }
