@@ -27,7 +27,6 @@ export class ToDoListPage implements OnInit {
   getTarefas(){
     this.apiService.getAllTasks().subscribe(data => {
       this.dados = data
-      console.log(this.dados)
     })
   }
 
